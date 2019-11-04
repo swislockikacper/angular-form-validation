@@ -1,0 +1,41 @@
+<div>
+  <form [formGroup]="form" (ngSubmit)="onFormSubmit()">
+    <section>
+      <p>First Name</p>
+      <input formControlName="firstName" placeholder="Enter First Name">
+      <p class="error" *ngIf="shouldShowErrorMessage(form.get('firstName'))">Wrong value</p>
+    </section>
+
+    <section>
+      <p>Last Name</p>
+      <input formControlName="lastName" placeholder="Enter Last Name"/>
+      <p class="error" *ngIf="shouldShowErrorMessage(form.get('lastName'))">Wrong value</p>
+    </section>
+
+    <section>
+      <p>Age</p>
+      <input formControlName="age" placeholder="Enter Age" type="number"/>
+      <p class="error" *ngIf="shouldShowErrorMessage(form.get('age'))">Wrong value</p>
+    </section>
+
+    <section>
+      <p>Email</p>
+      <input formControlName="email" placeholder="Enter Email"/>
+      <p class="error" *ngIf="shouldShowErrorMessage(form.get('email'))">Wrong value</p>
+    </section>
+
+    <section>
+      <p>Postal Code</p>
+      <input formControlName="postalCode" placeholder="Enter Postal Code"/>
+      <p class="error" *ngIf="shouldShowErrorMessage(form.get('postalCode'))">Wrong value</p>
+    </section>
+
+    <section>
+        <p>{{firstValue}} + {{secondValue}} is</p>
+        <input formControlName="result" placeholder="Enter Result" type="number"/>
+        <p class="error" *ngIf="shouldShowErrorMessage(form.get('result'))">Wrong value</p>
+      </section>
+
+    <button type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+</div>

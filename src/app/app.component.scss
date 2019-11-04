@@ -1,0 +1,29 @@
+div {
+  text-align: center;
+
+  form {
+    section {
+      p {
+        margin-bottom: 0.2rem;
+        font-weight: 600;
+      }
+
+      input {
+        width: 10rem;
+      }
+
+      .error {
+        color: red;
+        margin-top: 0.2rem;
+      }
+    }
+
+    button {
+      margin-top: 1rem;
+      width: 5rem;
+      height: 2rem;
+      background: #000;
+      color: #fff;
+    }
+  }
+}
